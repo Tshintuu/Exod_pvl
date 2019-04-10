@@ -8,7 +8,7 @@ import { TweenLite } from 'gsap';
 })
 export class SandboxComponent implements OnInit {
 
-  @ViewChild('light')
+  /*@ViewChild('light')
 
   private _light: ElementRef;
 
@@ -22,7 +22,7 @@ export class SandboxComponent implements OnInit {
 
   public inactivate(): TweenLite {
     return TweenLite.fromTo(this.light, 0.5, { className: 'active'}, { className: ''});
-  }
+  }*/
   
   constructor() { }
 
