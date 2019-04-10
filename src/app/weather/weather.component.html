@@ -1,3 +1,23 @@
-<p>
-  weather works!
-</p>
+<h2>Weather forecast</h2>
+
+<label>Start date</label>
+<input [(ngModel)]="eventDate.start" type="date"/>
+<label>End date</label>
+<input [(ngModel)]="eventDate.end" type="date"/>
+<label>Event Type</label>
+<select>
+    <option>Solar Flare</option>
+    <option>Solar Energetic Particle</option>
+    <option>Coronal Mass Ejection</option>
+    <option>Interplanetary Shock</option>
+    <option>Magnetopause Crossing</option>
+    <option>Geomagnetic Storm</option>
+    <option>Radiation Belt Enhancement</option>
+    <option>High Speed Stream</option>
+    <option>WSA ENLIL+Cone Model</option>
+</select>
+
+<p>start: {{ eventDate.start}}</p>
+<p>end: {{eventDate.end }}</p>
+
+<p *ngFor="let myData of data">{{ myData }}</p>
