@@ -1,11 +1,9 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  
-    
-  </div>
-<app-sandbox></app-sandbox>
+<div class="container-fluid whole">
+<app-header class="ma container-fluid"></app-header>
+<div class="ma row">
+<div class="ma col-2 navbar-collapse collapse" id="navbarNav"><app-menu></app-menu></div>  <div class="ma col"><router-outlet></router-outlet></div> 
+</div>
+<app-footer class="ma container-fluid"></app-footer>
+</div>
 
-<app-choix-planete></app-choix-planete>
+

@@ -1,0 +1,29 @@
+nav {
+    border-right: solid 2px white;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+    background: rgb(49, 49, 49);
+    padding-bottom:100%;
+    height:100%;
+}
+.burgermenu{
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    top:5px;
+}
+.buttonmenu{
+    height: 60px;
+    color: rgb(182, 200, 255);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Major Mono Display', monospace;
+    text-shadow: 0px 0px 20px blue,-5px 0px 5px rgb(0, 128, 233),5px 0px 5px rgb(0, 128, 233);
+}
+.buttonmenu:hover{
+    text-shadow: 0px 0px 30px rgb(66, 66, 255),-5px 0px 5px rgb(132, 199, 255),5px 0px 5px rgb(132, 199, 255);
+    color:white;
+}
+

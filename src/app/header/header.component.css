@@ -1,0 +1,27 @@
+header{
+    border-bottom: 2px solid white;
+    background-color: rgb(49, 49, 49);
+    height:200px;
+}
+.title{
+    font-size: calc( 5rem + 2vw );
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Major Mono Display',monospace;
+    text-shadow: 0px 0px 50px rgb(133, 19, 148),-10px 0px 10px rgb(206, 0, 233),10px 0px 10px rgb(206, 0, 233);
+    
+}
+.burgericon{
+    font-size: calc( 5rem + 2vw );
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 0px 0px 50px rgb(133, 19, 148),-10px 0px 10px rgb(206, 0, 233),10px 0px 10px rgb(206, 0, 233);
+    
+}
+.title:hover{
+    text-shadow: 0px 0px 50px rgb(168, 64, 182),-10px 0px 10px rgb(221, 142, 231),10px 0px 10px rgb(221, 142, 231);
+
+}
+.burgericon:hover{
+    text-shadow: 0px 0px 50px rgb(168, 64, 182),-10px 0px 10px rgb(221, 142, 231),10px 0px 10px rgb(221, 142, 231);
+}
