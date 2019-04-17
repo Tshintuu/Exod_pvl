@@ -14,32 +14,12 @@ public getPlanets():Observable<string[]>{
   return this.myService.get("https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_name,pl_orbper,pl_bmassj,pl_radj,rowupdate,pl_eqt,pl_msinie,ra,dec&order=dec&format=json").pipe(
     map(
       (param_data:any)=>{
-        let currentPlanet:string[]=[];
+        
         let results:any[]=[];
         let currentData=null;
-        for (let i=0; i<3; i++){
+        for (let i=0; i<6; i++){
           currentData = param_data[i];
-          currentPlanet.push("Planet name: "
-            +currentData.pl_name
-            +" Planet orbit: "
-            +currentData.pl_orbper
-            +" Planet mass: "
-            +currentData.pl_bmass
-            +" Planet radius "
-            +currentData.pl_radj
-            +" dmaj "
-            +currentData.rowupdate
-            +" equilibre "
-            +currentData.pl_eqt
-            +" Terrestrial mass "
-            +currentData.pl_msinie
-            +" ra "
-            +currentData.ra
-            +" dec "
-            +currentData.dec);
-            results.push(currentPlanet);
-            currentPlanet = [];
-
+          results.push([currentData]);
         }
         return results;
       }
