@@ -5,8 +5,11 @@ footer {
 li a{
     color: rgb(100, 100, 100);
     font-family: 'Wallpoet',cursive;
-    font-size: 3rem;
+    font-size: calc(1rem + 1.8vw);
 }
 li a:hover {
     color: bisque;
+}
+.nav{
+    margin-top: 2%;
 }

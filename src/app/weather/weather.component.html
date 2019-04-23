@@ -1,23 +1,34 @@
-<h2>Weather forecast</h2>
+<section class="container mt-5 mb-5 weatherSection">
+  <h2>Weather forecast</h2>
 
-<label>Start date</label>
-<input [(ngModel)]="eventDate.start" type="date"/>
-<label>End date</label>
-<input [(ngModel)]="eventDate.end" type="date"/>
-<label>Event Type</label>
-<select>
-    <option>Solar Flare</option>
-    <option>Solar Energetic Particle</option>
-    <option>Coronal Mass Ejection</option>
-    <option>Interplanetary Shock</option>
-    <option>Magnetopause Crossing</option>
-    <option>Geomagnetic Storm</option>
-    <option>Radiation Belt Enhancement</option>
-    <option>High Speed Stream</option>
-    <option>WSA ENLIL+Cone Model</option>
-</select>
+  <label>Start date</label>
+  <input [(ngModel)]="eventDate.start" type="date" />
+  <label>End date</label>
+  <input [(ngModel)]="eventDate.end" type="date" />
+  <label>Event Type</label>
+  <select [(ngModel)]="eventDate.type">
+    <option value="FLR">Solar Flare</option>
+    <option value="SEP">Solar Energetic Particle</option>
+    <option value="CME">Coronal Mass Ejection</option>
+    <option value="IPS">Interplanetary Shock</option>
+    <option value="MPC">Magnetopause Crossing</option>
+    <option value="GST">Geomagnetic Storm</option>
+    <option value="RBE">Radiation Belt Enhancement</option>
+    <option value="HSS">High Speed Stream</option>
+    <option value="WSAEnlilSimulations">WSA ENLIL+Cone Model</option>
+  </select>
 
-<p>start: {{ eventDate.start}}</p>
-<p>end: {{eventDate.end }}</p>
+  <p>start: {{ eventDate.start}}</p>
+  <p>end: {{ eventDate.end }}</p>
+  <button (click)="ngOnInit()">Search</button>
 
-<p *ngFor="let myData of data">{{ myData }}</p>
+  <p>Hey! This is a test!</p>
+
+  <div class="text-light mt-3">
+    <h3>Today's events</h3>
+    <div *ngFor="let myData of data">
+      <p>Event ID : {{myData.id}}</p>
+      <p>Start Date : {{myData.date}}</p>
+    </div>
+  </div>
+</section>

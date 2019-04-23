@@ -1,0 +1,41 @@
+[
+    {
+        "name" : "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_name,ra,dec&order=dec&format=ascii"
+
+    },
+    {
+        "orbital" : "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_orbper,ra,dec&order=dec&format=ascii"
+    },
+    {
+        "masse-planet" : "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_bmassj,ra,dec&order=dec&format=ascii"
+    },
+    {
+        "rayon-planet" : "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_radj,ra,dec&order=dec&format=ascii"
+    },
+    {
+        "distance" : "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_dist,ra,dec&order=dec&format=ascii"
+    },
+    {
+        "dmaj" : "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=rowupdate,ra,dec&order=dec&format=ascii"
+    },
+    {
+        "equilibre" : "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_eqt,ra,dec&order=dec&format=ascii"
+    },
+    {
+        "masse-terrestre" : "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_msinie,ra,dec&order=dec&format=ascii"
+    },
+    {
+        "longitude" : "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_glon,ra,dec&order=dec&format=ascii"
+    },
+    {
+        "latitude" : "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_glat,ra,dec&order=dec&format=ascii"
+    },
+    {
+        "graviter" : "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_logg,ra,dec&order=dec&format=ascii"
+
+    },
+
+    {
+      //  https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_name,pl_orbper,pl_bmassj,pl_radj,rowupdate,pl_eqt,pl_msinie,ra,dec&order=dec&format=json
+    }
+]

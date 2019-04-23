@@ -1,0 +1,18 @@
+table:hover{
+    border: 10px rgb(67, 109, 202) double;
+    box-shadow:  0px 0px 20px blue,-10px 0px 10px rgb(2, 81, 228),10px 0px 10px rgb(0, 74, 233);
+    background-color: rgb(255, 111, 86);
+   
+}
+table{
+    border: 5px rgb(67, 109, 202) solid;
+    box-shadow:  0px 0px 20px rgb(61, 61, 228),-5px 0px 5px rgb(0, 128, 233),5px 0px 5px rgb(16, 135, 233);
+    background-color: rgb(124, 99, 95);
+
+}
+
+
+.tab{
+    padding: 20px 20px 20px 20px ;
+    border: 10px 10px 10px 10px;
+}

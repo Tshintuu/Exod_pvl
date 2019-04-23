@@ -1,0 +1,28 @@
+<div class="container" *ngIf="data.length > 0">
+    <div class="row">
+    <div class="col-lg-4 mb-3 mt-3 col-md-6 col-sm-12" *ngFor="let myData of data">
+        <table alt="Card image cap" *ngFor="let currentData of myData">
+            <div class="tab">
+                <tr>
+                <th>Planet name :</th><td><span *ngIf="currentData.pl_name"> {{currentData.pl_name}}</span><span *ngIf="!currentData.pl_name">unnamed</span></td>
+                </tr>
+                <tr>
+                <th>Planet distance :</th><td><span *ngIf="currentData.pl_dist"> {{currentData.pl_dist}}</span><span *ngIf="!currentData.pl_dist">no defined</span></td>
+                </tr>
+                <tr>
+                <th>Planet orbite :</th><td><span *ngIf="currentData.pl_orbper"> {{currentData.pl_orbper}}</span><span *ngIf="!currentData.pl_orbper">rien</span></td>
+                </tr>
+                <tr>
+                <th>Planet masse : </th><td><span *ngIf="currentData.pl_bmass">{{currentData.pl_bmass}}</span><span *ngIf="!currentData.pl_bmass">no calcul</span></td>
+                </tr>
+                <tr>
+                <th>Planet radius :</th><td><span *ngIf="currentData.pl_radj">{{currentData.pl_radj}}</span><span *ngIf="!currentData.pl_radj">no calcul</span></td>
+                </tr>
+            </div>
+        </table>
+        <div class="col-2"></div>
+    </div>
+    </div>
+</div>
+
+<img *ngIf="data.length == 0" src="https://loading.io/spinners/rolling/lg.curve-bars-loading-indicator.gif" />

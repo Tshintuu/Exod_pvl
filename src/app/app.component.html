@@ -1,9 +1,12 @@
 <div class="container-fluid whole">
-<app-header class="ma container-fluid"></app-header>
-<div class="ma row">
-<div class="ma col-2 navbar-collapse collapse" id="navbarNav"><app-menu></app-menu></div>  <div class="ma col"><router-outlet></router-outlet></div> 
+    <app-header class="ma container-fluid"></app-header>
+    <div class="ma container-fluid row">
+        <div class="ma col-2 navbar-collapse collapse" id="navbarNav">
+            <app-menu></app-menu>
+        </div>
+        <div class="ma outlet col">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <app-footer class="ma container-fluid footer"></app-footer>
 </div>
-<app-footer class="ma container-fluid"></app-footer>
-</div>
-
-

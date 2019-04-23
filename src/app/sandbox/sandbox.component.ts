@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { TweenLite } from 'gsap';
+//import { TweenLite } from 'gsap';
 
 @Component({
   selector: 'app-sandbox',

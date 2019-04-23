@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
+import { ChoixPlaneteComponent } from './choix-planete/choix-planete.component';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -44,7 +45,8 @@ const routes: Routes = [
     HeaderComponent,
     MenuComponent,
     FooterComponent,
-    TestrouteoutputComponent
+    TestrouteoutputComponent,
+    ChoixPlaneteComponent
   ],
   imports: [
     BrowserModule,
