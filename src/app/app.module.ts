@@ -15,8 +15,9 @@ import { TestrouteoutputComponent } from './testrouteoutput/testrouteoutput.comp
 
 const routes: Routes = [
   { path: '', component: MainComponent },
-  { path: 'saucisse', component: TestrouteoutputComponent },
-  { path: 'weather', component: WeatherComponent }
+  { path: 'menutest', component: TestrouteoutputComponent },
+  { path: 'weather', component: WeatherComponent },
+  { path: 'menu', component: MenuComponent }
 
   //{ path: 'path/:routeParam', component: MyComponent },
   //{ path: 'staticPath', component: ... },
@@ -54,13 +55,15 @@ const routes: Routes = [
   ],
   
   exports: [
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
 export class FeatureRoutingModule {}
+export {routes}
 /*
 import { AppComponent } from './app.component';
 //import { SandboxComponent } from './sandbox/sandbox.component';
