@@ -1,7 +1,7 @@
 <nav class="container-fluid menu navbar ">
     <img id="imgfond"src="assets/menutst.png" alt="">
     <ul class="navbar-nav flex-column col-12 burgermenu">
-        <a href="/planets" class="buttonmenu navitem">
+        <a [routerLink]="['/planets']" class="buttonmenu navitem">
             <span class="textmenu">Planet</span>
         </a> 
         <a [routerLink]="[ '/menutest']"  class="buttonmenu navitem">
@@ -10,7 +10,7 @@
         <a [routerLink]="[ '/menutest']" class="buttonmenu navitem">
             <span class="textmenu">Travel</span>
         </a> 
-        <a [routerLink]="[ '/menutest']" class="buttonmenu navitem">
+        <a [routerLink]="[ '/weather']" class="buttonmenu navitem">
             <span class="textmenu">Weather</span>
         </a> 
         <a [routerLink]="[ '/menutest']" class="buttonmenu navitem">

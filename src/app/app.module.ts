@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'menutest', component: TestrouteoutputComponent },
   { path: 'weather', component: WeatherComponent },
-  { path: 'menu', component: MenuComponent }
+  { path: 'menu', component: MenuComponent },
+  { path: 'planets', component: ChoixPlaneteComponent }
 
   //{ path: 'path/:routeParam', component: MyComponent },
   //{ path: 'staticPath', component: ... },
