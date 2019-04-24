@@ -2,13 +2,17 @@
 <app-menu class="col-12 d-sm-none"></app-menu>
 
 <!-- Page d'accueil classique -->
-<div class="d-none d-sm-flex col-sm-12 row container-fluid ma">
+<div class="d-none d-sm-flex col-sm-12 row container-fluid ma main">
     <div class="col-9 ">
         <!-- Image du jour -->
         <div class="row">
-            <div class="apodcont col-11 offset-1 d-flex justify-content-center">
+            <div class="apodcont col-6 offset-1 d-flex justify-content-center">
                 <img class=" apod " src="{{apod.image}}" alt="">
             </div> 
+            <div class="apodcont col-4 d-flex justify-content-center row">
+                <p class="col-12 title">{{apod.title}}</p>
+                <p class="col-12 expl">{{apod.explanation}}</p>
+            </div>
         </div>
         <!-- Sponsors -->
         <div class="row">
