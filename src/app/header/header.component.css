@@ -25,3 +25,12 @@ header{
 .burgericon:hover{
     text-shadow:  0px 0px 50px rgb(168, 64, 182),-10px 0px 20px rgb(221, 142, 231),10px 0px 20px rgb(221, 142, 231);
 }
+.planetepvl{
+    width: 10rem;
+    border: 10px rgb(67, 109, 202) double;
+    box-shadow:  0px 0px 20px blue,-10px 0px 10px rgb(2, 81, 228),10px 0px 10px rgb(0, 74, 233);
+}
+.planetepvl:hover{
+    border: 5px rgb(67, 109, 202) solid;
+    box-shadow:  0px 0px 20px rgb(61, 61, 228),-5px 0px 5px rgb(0, 128, 233),5px 0px 5px rgb(16, 135, 233);
+}
