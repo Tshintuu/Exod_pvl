@@ -46,11 +46,11 @@ app-menu{
 }
 .sponsor2{
     font-family: "Wallpoet",Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
+    font-size: calc( 0.7rem  + 1vw);
 }
 .sponsor3{
     font-family: "Libre Barcode 39 Text",Arial, Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: calc( 0.7rem  + 1.2vw);
     color: grey;
 }
 .article{
