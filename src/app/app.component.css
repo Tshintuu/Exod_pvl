@@ -9,5 +9,8 @@
     padding: 0px;
 }
 .outlet{
-    min-height: 800px;
+    min-height: 80vh;
+}
+.footer{
+    z-index: 9;
 }

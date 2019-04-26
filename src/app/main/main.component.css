@@ -11,14 +11,47 @@ app-menu{
     margin-top: 2%;
 }
 .apod{
-    max-height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+.desc{
+    overflow:scroll;
 }
 .imgsponsor{
     width: 60%
 }
+.sponsortitle{
+    background: rgba(35, 35, 35, 0.726);
+    color:white;
+    font-size: 1.2rem;
+    border: solid 1px white;
+}
 .sponsorcont{
     background: rgba(35, 35, 35, 0.726);
     color:white;
+}
+.sponsortxt{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+}
+.sponsor1{
+    font-family: "Nova Mono",Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+.sponsor2{
+    font-family: "Wallpoet",Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+.sponsor3{
+    font-family: "Libre Barcode 39 Text",Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: grey;
 }
 .article{
     height: 46%;
