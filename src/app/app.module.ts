@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'menutest', component: TestrouteoutputComponent },
   { path: 'weather', component: WeatherComponent },
   { path: 'menu', component: MenuComponent },
-  { path: 'planets', component: ChoixPlaneteComponent }
+  { path: 'planets', component: ChoixPlaneteComponent },
+  { path: 'sandbox', component: SandboxComponent }
 
   //{ path: 'path/:routeParam', component: MyComponent },
   //{ path: 'staticPath', component: ... },
