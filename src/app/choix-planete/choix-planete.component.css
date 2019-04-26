@@ -1,8 +1,9 @@
 table:hover{
     border: 10px rgb(67, 109, 202) double;
-    box-shadow:  0px 0px 20px blue,-10px 0px 10px rgb(2, 81, 228),10px 0px 10px rgb(0, 74, 233);
-    background-color: rgb(255, 111, 86);
-   
+    box-shadow:  0px 0px 20px blue,-15px 0px 15px rgb(2, 81, 228),15px 0px 15px rgb(0, 74, 233);
+    background-color:transparent;
+    color: rgb(245, 228, 130);
+    font-size: 1.1rem;
 }
 table{
     border: 5px rgb(67, 109, 202) solid;
@@ -15,4 +16,12 @@ table{
 .tab{
     padding: 20px 20px 20px 20px ;
     border: 10px 10px 10px 10px;
+}
+
+.attente{
+    margin-left: 40%;
+    margin-top: 10%;
+
+   
+    
 }

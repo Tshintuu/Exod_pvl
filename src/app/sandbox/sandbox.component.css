@@ -1,10 +1,68 @@
-/* h2{
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+h2{
     margin: auto;
     text-decoration: underline;
     text-align: center;
+    color: white;
 }
 
-svg{
+.loader{
+    display: flex;
+}
+
+.loader p{
+    color: red;
+    text-shadow: 0 0 5px red;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+.loaderOutter{
+    display: flex;
+    border: 5px solid transparent;
+    border-top: 5px solid red;
+    border-right: 5px solid red;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+.loaderMid{
+    margin: auto;
+    display: flex;
+    border: 3px solid transparent;
+    border-top: 3px solid red;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: backSpin 1s linear infinite;
+}
+
+.loaderInner{
+    margin: auto;
+    border: 2px solid transparent;
+    border-bottom: 2px solid red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes backSpin{
+    0% {transform: rotate(360deg);}
+    100% {transform: rotate(0deg);}
+}
+
+/*svg{
     margin-left: 38%;
     border: 1px solid black;
 }

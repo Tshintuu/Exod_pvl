@@ -14,6 +14,7 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { TestrouteoutputComponent } from './testrouteoutput/testrouteoutput.component';
 import { JobComponent } from './job/job.component';
+import { ServicesComponent } from './services/services.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -21,13 +22,15 @@ const routes: Routes = [
   { path: 'weather', component: WeatherComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'planets', component: ChoixPlaneteComponent },
-  { path: 'job', component: JobComponent }
+  { path: 'job', component: JobComponent },
+  { path: 'services', component: ServicesComponent },
+  { path: 'sandbox', component: SandboxComponent }
 
-  //{ path: 'path/:routeParam', component: MyComponent },
-  //{ path: 'staticPath', component: ... },
-  //{ path: '**', component: ... },
-  //{ path: 'oldPath', redirectTo: '/staticPath' },
-  //{ path: ..., component: ..., data: { message: 'Custom' }
+  // { path: 'path/:routeParam', component: MyComponent },
+  // { path: 'staticPath', component: ... },
+  // { path: '**', component: ... },
+  // { path: 'oldPath', redirectTo: '/staticPath' },
+  // { path: ..., component: ..., data: { message: 'Custom' }
 ];
 
 /*@NgModule({
@@ -50,16 +53,16 @@ const routes: Routes = [
     FooterComponent,
     TestrouteoutputComponent,
     ChoixPlaneteComponent,
-    JobComponent
+    JobComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(routes)
-    
   ],
-  
+
   exports: [
     RouterModule,
     HttpClientModule
@@ -69,7 +72,7 @@ const routes: Routes = [
 })
 export class AppModule { }
 export class FeatureRoutingModule {}
-export {routes}
+export {routes};
 /*
 import { AppComponent } from './app.component';
 //import { SandboxComponent } from './sandbox/sandbox.component';
