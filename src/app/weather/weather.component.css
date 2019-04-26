@@ -4,6 +4,7 @@ section{
     font-family: 'Orbitron', sans-serif;
     color: rgb(169, 255, 251);
     text-shadow: 0 0 10px rgb(169, 255, 251); 
+    background-color: rgba(0, 0, 0, 0.514);
 }
 
 h3{
@@ -77,11 +78,52 @@ h3{
 
 .dayWeather{
     padding: 2%;
-    margin: 2%;
+    margin: auto;
     border:2px solid white;
     text-align: center;
     box-shadow: 0 0 5px rgb(169, 255, 251);
     background-color: transparent;
+    /*animation: enlarge 0.5s linear 1;*/
+}
+
+@keyframes enlarge{
+    0% {
+        width: 0;
+        font-size: 0;
+        height: 1px;
+    }
+
+    50% {
+        width: 100%;
+        height: 1px;
+    }
+    
+    80% {
+        height: 50%;
+    }
+    99%{
+        font-size: 0;
+    }
+    100% {
+        font-size:1rem;
+        height: 100%;
+    }
+}
+
+.noEvent{
+    /*animation: display 0.5s linear 1;*/
+}
+
+@keyframes display{
+    0% {
+        display: none;
+    }
+    99%{
+        display: none;
+    }
+    100% {
+        display: inline;
+    }
 }
 
 .search{
@@ -107,16 +149,24 @@ h3{
 .search button{
     width: 10%;
     margin-top: 2%;
-    border: 2px solid white;
     border-radius: 5px;
-    background: transparent;
+    background: transparent;  
+    border: 2px solid white;
+    text-shadow: 0 0 10px white;
+    box-shadow: 0 0 5px white;
     color: white;
+    transition: color 0.5s;
+    transition: border 0.5s;
+    transition: text-shadow 0.5s;
+    transition: box-shadow 0.5s;
 }
 
 .search button:hover{
-    border: 2px solid red;
-    background: white;
-    color: red;
+    border: 2px solid rgb(255, 185, 94);
+    color: rgb(255, 185, 94);
+    text-shadow: 0 0 10px rgb(255, 185, 94);
+    box-shadow: 0 0 10px rgb(255, 185, 94);
+    transition: all 0.5s;
 }
 
 .title{
@@ -124,4 +174,17 @@ h3{
     color: rgb(255, 185, 94);
     text-shadow: 0 0 10px rgb(255, 185, 94);
     margin-right: 2%;
+}
+
+.dataCard{
+    animation: fadeIn 1s linear 1;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }

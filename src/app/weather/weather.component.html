@@ -11,7 +11,7 @@
       <p>PROCESSING...</p>
     </div>
   </div>
-  <p class="dayWeather" *ngIf="todayData == ''">Nothing to report for today. You're good to go!</p>
+  <p class="dayWeather" *ngIf="todayData == ''"><span class="noEvent">Nothing to report for today. You're good to go!</span></p>
   <div *ngFor="let currentData of todayData">
   <div class="card m-2 dayWeather" *ngFor="let myDayData of currentData">
     <div class="card-body bg-dark">
@@ -68,7 +68,7 @@
       </div>
     </div>
     <p *ngIf="data == null">No data</p>
-    <div class="card m-3" *ngFor="let myData of data">
+    <div class="card m-3 dataCard" *ngFor="let myData of data">
       <div class="card-body bg-dark">
         <h4 class="card-title text-light"><span class="title">Event type:</span> {{myData.type}}</h4>
         <p class="card-text text-light"><span class="title">Event ID:</span> {{myData.id}}</p>
