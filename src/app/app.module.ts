@@ -14,6 +14,7 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { TestrouteoutputComponent } from './testrouteoutput/testrouteoutput.component';
 import { JobComponent } from './job/job.component';
+import { ServicesComponent } from './services/services.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -21,8 +22,8 @@ const routes: Routes = [
   { path: 'weather', component: WeatherComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'planets', component: ChoixPlaneteComponent },
-  { path: 'job', component: JobComponent }
-
+  { path: 'job', component: JobComponent },
+  { path: 'services', component: ServicesComponent }
   //{ path: 'path/:routeParam', component: MyComponent },
   //{ path: 'staticPath', component: ... },
   //{ path: '**', component: ... },
@@ -50,7 +51,8 @@ const routes: Routes = [
     FooterComponent,
     TestrouteoutputComponent,
     ChoixPlaneteComponent,
-    JobComponent
+    JobComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@
                 <th>Planet name :</th><td><span *ngIf="currentData.pl_name"> {{currentData.pl_name}}</span><span *ngIf="!currentData.pl_name">unnamed</span></td>
                 </tr>
                 <tr>
-                <th>Planet distance :</th><td><span *ngIf="currentData.pl_dist"> {{currentData.pl_dist}}</span><span *ngIf="!currentData.pl_dist">no defined</span></td>
+                <th>Planet distance :</th><td><span *ngIf="currentData.st_dist"> {{currentData.st_dist}}</span><span *ngIf="!currentData.st_dist">no defined</span></td>
                 </tr>
                 <tr>
                 <th>Planet orbite :</th><td><span *ngIf="currentData.pl_orbper"> {{currentData.pl_orbper}}</span><span *ngIf="!currentData.pl_orbper">rien</span></td>
@@ -25,4 +25,4 @@
     </div>
 </div>
 
-<img *ngIf="data.length == 0" src="https://loading.io/spinners/pacman/lg.eat-bean-pie-loading-gif.gif" />
+<img *ngIf="data.length == 0" src="https://loading.io/spinners/pacman/lg.eat-bean-pie-loading-gif.gif" class="attente" />
