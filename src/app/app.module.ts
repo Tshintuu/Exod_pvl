@@ -13,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { TestrouteoutputComponent } from './testrouteoutput/testrouteoutput.component';
+import { JobComponent } from './job/job.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'weather', component: WeatherComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'planets', component: ChoixPlaneteComponent },
-  { path: 'sandbox', component: SandboxComponent }
+  { path: 'sandbox', component: SandboxComponent },
+  { path: 'job', component: JobComponent }
 
   //{ path: 'path/:routeParam', component: MyComponent },
   //{ path: 'staticPath', component: ... },
@@ -48,7 +50,8 @@ const routes: Routes = [
     MenuComponent,
     FooterComponent,
     TestrouteoutputComponent,
-    ChoixPlaneteComponent
+    ChoixPlaneteComponent,
+    JobComponent
   ],
   imports: [
     BrowserModule,

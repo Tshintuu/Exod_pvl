@@ -1,9 +1,10 @@
 footer {
     border-top: 2px solid white;
-    background-color: rgb(15, 15, 15);
+    background-image: url("/assets/footer.png");
+    background-size: 100% 100%;
 }
 li a{
-    color: rgb(100, 100, 100);
+    color: rgba(168, 157, 0, 0.568);
     font-family: 'Wallpoet',cursive;
     font-size: calc(1rem + 1.8vw);
 }

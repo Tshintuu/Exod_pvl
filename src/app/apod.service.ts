@@ -15,4 +15,6 @@ export class ApodService {
 }
 export interface Apod {
   image: string;
+  title: string;
+  explanation: string;
 }

@@ -9,15 +9,17 @@ export class MainComponent implements OnInit {
   apod : Apod;
   constructor(private apodService : ApodService) {
     
-    this.apodService.getApod().subscribe(
-      (data: Apod) => this.apod = {
-        image: data['url'],
-       });
+   
    }
 
   ngOnInit() {
-    
-  }
+    this.apodService.getApod().subscribe(
+      (data: Apod) => this.apod = {
+        image: data['url'],
+        title: data['title'],
+        explanation: data['explanation'],
+       });
+    }
  
 
 }
