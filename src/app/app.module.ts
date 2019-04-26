@@ -23,12 +23,14 @@ const routes: Routes = [
   { path: 'menu', component: MenuComponent },
   { path: 'planets', component: ChoixPlaneteComponent },
   { path: 'job', component: JobComponent },
-  { path: 'services', component: ServicesComponent }
-  //{ path: 'path/:routeParam', component: MyComponent },
-  //{ path: 'staticPath', component: ... },
-  //{ path: '**', component: ... },
-  //{ path: 'oldPath', redirectTo: '/staticPath' },
-  //{ path: ..., component: ..., data: { message: 'Custom' }
+  { path: 'services', component: ServicesComponent },
+  { path: 'sandbox', component: SandboxComponent }
+
+  // { path: 'path/:routeParam', component: MyComponent },
+  // { path: 'staticPath', component: ... },
+  // { path: '**', component: ... },
+  // { path: 'oldPath', redirectTo: '/staticPath' },
+  // { path: ..., component: ..., data: { message: 'Custom' }
 ];
 
 /*@NgModule({
@@ -59,9 +61,8 @@ const routes: Routes = [
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(routes)
-    
   ],
-  
+
   exports: [
     RouterModule,
     HttpClientModule
@@ -71,7 +72,7 @@ const routes: Routes = [
 })
 export class AppModule { }
 export class FeatureRoutingModule {}
-export {routes}
+export {routes};
 /*
 import { AppComponent } from './app.component';
 //import { SandboxComponent } from './sandbox/sandbox.component';

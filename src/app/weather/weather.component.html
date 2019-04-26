@@ -1,34 +1,84 @@
 <section class="container mt-5 mb-5 weatherSection">
-  <h2>Weather forecast</h2>
+  <h2 class="m-auto text-center">WEATHER FORECAST</h2>
+  <h3>Today's events</h3>
+  <div *ngIf="todayData.length == 0 && todayLoading == true">
+    <div class="loader">
+      <div class="loaderOutter">
+        <div class="loaderMid">
+          <div class="loaderInner"></div>
+        </div>
+      </div>
+      <p>PROCESSING...</p>
+    </div>
+  </div>
+  <p class="dayWeather" *ngIf="todayData == ''">Nothing to report for today. You're good to go!</p>
+  <div *ngFor="let currentData of todayData">
+  <div class="card m-2 dayWeather" *ngFor="let myDayData of currentData">
+    <div class="card-body bg-dark">
+      <h4 class="card-title text-light"><span class="title">Event type:</span> {{myDayData.type}}</h4>
+      <p class="card-text text-light"><span class="title">Event ID:</span> {{myDayData.id}}</p>
+      <p class="card-text text-light"><span class="title">Start Date:</span> {{myDayData.date}}</p>
+      <div *ngIf="myDayData.location"><span class="title">Location: </span>
+        <p class="ml-2" *ngIf="myDayData.latitude"><span class="title">latitude:
+          </span>{{ myDayData.latitude }}<br /><span class="title">longitude: </span>{{ myDayData.longitude }}</p>
+        <p *ngIf="!myDayData.latitude">{{myDayData.location}}</p>
+      </div>
+    </div>
 
-  <label>Start date</label>
-  <input [(ngModel)]="eventDate.start" type="date" />
-  <label>End date</label>
-  <input [(ngModel)]="eventDate.end" type="date" />
-  <label>Event Type</label>
-  <select [(ngModel)]="eventDate.type">
-    <option value="FLR">Solar Flare</option>
-    <option value="SEP">Solar Energetic Particle</option>
-    <option value="CME">Coronal Mass Ejection</option>
-    <option value="IPS">Interplanetary Shock</option>
-    <option value="MPC">Magnetopause Crossing</option>
-    <option value="GST">Geomagnetic Storm</option>
-    <option value="RBE">Radiation Belt Enhancement</option>
-    <option value="HSS">High Speed Stream</option>
-    <option value="WSAEnlilSimulations">WSA ENLIL+Cone Model</option>
-  </select>
+  </div>
+  </div>
 
-  <p>start: {{ eventDate.start}}</p>
-  <p>end: {{ eventDate.end }}</p>
-  <button (click)="ngOnInit()">Search</button>
+  <h3>Search for a specific period of time</h3>
 
-  <p>Hey! This is a test!</p>
+  <div class="d-flex flex-column search">
+    <label>Start date</label>
+    <input [(ngModel)]="eventDate.start" type="date" />
+    <label>End date</label>
+    <input [(ngModel)]="eventDate.end" type="date" />
+    <label>Event Type</label>
+    <select [(ngModel)]="eventDate.type" required>
+      <option value="FLR">Solar Flare</option>
+      <option value="SEP">Solar Energetic Particle</option>
+      <option value="CME">Coronal Mass Ejection</option>
+      <option value="IPS">Interplanetary Shock</option>
+      <option value="MPC">Magnetopause Crossing</option>
+      <option value="GST">Geomagnetic Storm</option>
+      <option value="RBE">Radiation Belt Enhancement</option>
+      <option value="HSS">High Speed Stream</option>
+      <option value="WSAEnlilSimulations">WSA ENLIL+Cone Model</option>
+    </select>
+    <button (click)="ngOnInit(); searchSubmit()">Search</button>
+  </div>
+
+
 
   <div class="text-light mt-3">
-    <h3>Today's events</h3>
-    <div *ngFor="let myData of data">
-      <p>Event ID : {{myData.id}}</p>
-      <p>Start Date : {{myData.date}}</p>
+    <div *ngIf="submitted">
+      <h3>Results</h3>
+      <p class="pl-2">{{eventDate.type}} events from {{ eventDate.start }} to {{ eventDate.end }}</p>
+    </div>
+    <div *ngIf="data.length == 0 && submitted">
+      <div class="loader">
+        <div class="loaderOutter">
+          <div class="loaderMid">
+            <div class="loaderInner"></div>
+          </div>
+        </div>
+        <p>PROCESSING...</p>
+      </div>
+    </div>
+    <p *ngIf="data == null">No data</p>
+    <div class="card m-3" *ngFor="let myData of data">
+      <div class="card-body bg-dark">
+        <h4 class="card-title text-light"><span class="title">Event type:</span> {{myData.type}}</h4>
+        <p class="card-text text-light"><span class="title">Event ID:</span> {{myData.id}}</p>
+        <p class="card-text text-light"><span class="title">Start Date:</span> {{myData.date}}</p>
+        <div *ngIf="myData.location"><span class="title">Location: </span>
+          <p class="ml-2" *ngIf="myData.latitude"><span class="title">latitude: </span>{{ myData.latitude }}<br /><span
+              class="title">longitude: </span>{{ myData.longitude }}</p>
+          <p *ngIf="!myData.latitude">{{myData.location}}</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
