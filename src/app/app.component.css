@@ -1,16 +1,22 @@
 .whole{
     margin:0px;
     padding:0px;
-    background-image: url("/assets/background.png");
-    background-size: 100% 100%;
+    /*background-image: url("/assets/background.png");
+    background-size: 100% 100%;*/
+    background-color: black;
 }
 .ma{
     margin: 0px;
     padding: 0px;
+    border: none;
 }
 .outlet{
     min-height: 80vh;
 }
 .footer{
     z-index: 9;
+}
+
+.largeMenu{
+    border: none;
 }

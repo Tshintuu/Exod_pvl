@@ -5,20 +5,21 @@ nav {
     margin: 0px;
     height:100%;
     padding-bottom: 140%;
-    background-image: url("/assets/menu.png");
-    background-size: 100% 100%;
+    /*background-image: url("/assets/menu.png");
+    background-size: 100% 100%;*/
+    background-color: black;
 }
 .burgermenu{
     margin: 0px;
     padding: 0px;
     position: absolute;
     top:5px;
+    border: none;
 }
 .buttonmenu{
     height: 60px;
     color: rgb(182, 200, 255);
     background: rgba(80, 76, 76, 0.5);
-    font-size: calc( 0.7vw + 1.2rem);
     text-align: center;
     margin-bottom: 10px;
     font-family: 'Major Mono Display', monospace;
@@ -28,6 +29,16 @@ nav {
     text-shadow: 0px 0px 30px rgb(66, 66, 255),-5px 0px 5px rgb(132, 199, 255),5px 0px 5px rgb(132, 199, 255);
     color:white;
     background: rgba(146, 143, 143, 0.384);
+}
+
+.buttonmenu a{
+    color: rgb(182, 200, 255);
+    font-size: calc( 0.7vw + 1.2rem);
+    font-weight: 600;
+}
+
+.buttonmenu:hover a{
+    text-decoration: underline;
 }
 
 

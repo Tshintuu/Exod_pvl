@@ -23,5 +23,5 @@ export class ChoixPlaneteComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }

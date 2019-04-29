@@ -1,22 +1,27 @@
 <nav class="container-fluid menu navbar ">
-    <ul class="navbar-nav flex-column col-12 burgermenu">
-        <a [routerLink]="['/planets']" class="buttonmenu navitem">
-            <span class="textmenu">Planet</span>
-        </a> 
-        <a [routerLink]="[ '/menutest']"  class="buttonmenu navitem">
-            <span class="textmenu">Test</span>
-        </a> 
-        <a [routerLink]="[ '/menutest']" class="buttonmenu navitem">
-            <span class="textmenu">Travel</span>
-        </a> 
-        <a [routerLink]="[ '/weather']" class="buttonmenu navitem">
-            <span class="textmenu">Weather</span>
-        </a> 
-        <a [routerLink]="[ '/services']" class="buttonmenu navitem">
-            <span class="textmenu">Services</span>
-        </a> 
-        <a [routerLink]="['/job']" class="buttonmenu navitem">
-            <span class="textmenu">Job</span> 
-        </a>
-    </ul>    
-    </nav>
+  <ul class="navbar-nav flex-column col-12 burgermenu">
+    <li class="buttonmenu navitem"><a [routerLink]="['/planets']">
+        <span class="textmenu">Planet</span>
+      </a>
+    </li>
+    <li class="buttonmenu navitem"><a [routerLink]="[ '/menutest']">
+        <span class="textmenu">Travel</span>
+      </a>
+    </li>
+    <li class="buttonmenu navitem">
+      <a [routerLink]="[ '/weather']">
+        <span class="textmenu">Weather</span>
+      </a>
+    </li>
+    <li  class="buttonmenu navitem">
+      <a [routerLink]="[ '/services']">
+        <span class="textmenu">Services</span>
+      </a>
+    </li>
+    <li  class="buttonmenu navitem">
+      <a [routerLink]="['/job']">
+        <span class="textmenu">Job</span>
+      </a>
+    </li>
+  </ul>
+</nav>

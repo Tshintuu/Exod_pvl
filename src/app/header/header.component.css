@@ -1,7 +1,8 @@
 header{
     border-bottom: 2px solid white;
-    background-image: url("/assets/header.png");
-    background-size: 100% 100%;
+    /*background-image: url("/assets/header.png");
+    background-size: 100% 100%;*/
+    background-color: black;
 }
 .title{
     font-size: calc( 2rem + 4vw );
@@ -10,6 +11,7 @@ header{
     vertical-align: middle;
     font-family: 'Major Mono Display',monospace;
     text-shadow: 0px 0px 50px rgb(133, 19, 148),-10px 0px 10px rgb(206, 0, 233),10px 0px 10px rgb(206, 0, 233);
+    transition: text-shadow 1s;
     
 }
 .burgericon{
@@ -21,6 +23,7 @@ header{
 }
 .title:hover{
     text-shadow: 0px 0px 50px rgb(168, 64, 182),-10px 0px 20px rgb(221, 142, 231),10px 0px 20px rgb(221, 142, 231);
+    transition: all 1s;
 
 }
 .burgericon:hover{
