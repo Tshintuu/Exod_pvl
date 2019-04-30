@@ -13,7 +13,7 @@ export class ApodService {
     return this.http.get(this.apodUrl);
   }
 }
-export interface Apod {
+export class Apod {
   image: string;
   title: string;
   explanation: string;
