@@ -11,7 +11,7 @@ export class PlanetsService {
   constructor(private myService:HttpClient) { }
 
 public getPlanets():Observable<string[]>{
-  return this.myService.get("https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_name,pl_orbper,pl_bmassj,pl_radj,rowupdate,pl_eqt,pl_msinie,st_dist,ra,dec&order=dec&format=json").pipe(
+  return this.myService.get("https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&select=pl_name,pl_orbper,pl_bmassj,st_glon,st_glat,pl_radj,rowupdate,pl_eqt,pl_msinie,st_dist,ra,dec&order=dec&format=json").pipe(
     map(
       (param_data:any)=>{
         
