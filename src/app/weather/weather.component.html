@@ -1,4 +1,4 @@
-<section class="container mt-5 mb-5 weatherSection">
+<section class="container pt-5 pb-5 weatherSection">
   <h2 class="m-auto text-center">WEATHER FORECAST</h2>
   <h3>Today's events</h3>
   <div *ngIf="todayData.length == 0 && todayLoading == true">
@@ -8,13 +8,13 @@
           <div class="loaderInner"></div>
         </div>
       </div>
-      <p>PROCESSING...</p>
+      <p class="glitch" data-text="PROCESSING...">PROCESSING...</p>
     </div>
   </div>
   <p class="dayWeather" *ngIf="todayData == ''"><span class="noEvent">Nothing to report for today. You're good to go!</span></p>
   <div *ngFor="let currentData of todayData">
   <div class="card m-2 dayWeather" *ngFor="let myDayData of currentData">
-    <div class="card-body bg-dark">
+    <div class="card-body">
       <h4 class="card-title text-light"><span class="title">Event type:</span> {{myDayData.type}}</h4>
       <p class="card-text text-light"><span class="title">Event ID:</span> {{myDayData.id}}</p>
       <p class="card-text text-light"><span class="title">Start Date:</span> {{myDayData.date}}</p>
@@ -64,12 +64,12 @@
             <div class="loaderInner"></div>
           </div>
         </div>
-        <p>PROCESSING...</p>
+        <p class="glitch" data-text="PROCESSING...">PROCESSING...</p>
       </div>
     </div>
     <p *ngIf="data == null">No data</p>
     <div class="card m-3 dataCard" *ngFor="let myData of data">
-      <div class="card-body bg-dark">
+      <div class="card-body">
         <h4 class="card-title text-light"><span class="title">Event type:</span> {{myData.type}}</h4>
         <p class="card-text text-light"><span class="title">Event ID:</span> {{myData.id}}</p>
         <p class="card-text text-light"><span class="title">Start Date:</span> {{myData.date}}</p>

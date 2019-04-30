@@ -69,6 +69,6 @@ export class ChoixPlaneteComponent implements OnInit {
     console.log("today data "+this.todayData);
 
   }
-
+  
 }
 

@@ -1,7 +1,9 @@
-<div class="container" *ngIf="data.length > 0">
+<section class="pt-5 pb-5">
+  <h2 class="m-auto text-center">PLANET DATABASE</h2>
+  <div class="container" *ngIf="data.length > 0">
     <div class="row">
-    <div class="col-lg-4 mb-3 mt-3 col-md-6 col-sm-12" *ngFor="let myData of data">
-        <table alt="Card image cap" *ngFor="let currentData of myData">
+      <div class="col-lg-4 mb-3 mt-3 col-md-6 col-sm-12" *ngFor="let myData of data">
+        <!--<table alt="Card image cap" *ngFor="let currentData of myData">
             <div class="tab">
                 <tr>
                 <th>Planet name :</th><td><span *ngIf="currentData.pl_name"> {{currentData.pl_name}}</span><span *ngIf="!currentData.pl_name">unnamed</span></td>
@@ -19,10 +21,52 @@
                 <th>Planet radius :</th><td><span *ngIf="currentData.pl_radj">{{currentData.pl_radj}}</span><span *ngIf="!currentData.pl_radj">no calcul</span></td>
                 </tr>
             </div>
-        </table>
+        </table>-->
+        <div class="card planetCard" *ngFor="let currentData of myData">
+          <div class="cardBorder">
+            <svg width="100%" height="100%">
+              <path class="box" d="M10 10 L335 10 L340 15 L340 100 L325 125 L325 320 L320 325" stroke="white" stroke-width="3px" fill="rgba(35, 35, 35, 0.726)"></path>
+              <path class="box" d="M10 10 L5 15 L5 320 L10 325 L320 325" stroke="white" stroke-width="3px" fill="rgba(35, 35, 35, 0.726)"></path>
+              <path class="boxStripe" d="M332 10 L337 15 L337 100 L325 125 L325 320" stroke="white" stroke-width="5px" fill="rgba(35, 35, 35, 0.726)"></path>
+            </svg>
+          </div>
+          <div class="card-body cardBody">
+            <p class="card-title"><span class="cardTitle">Planet name: </span><span
+                *ngIf="currentData.pl_name">{{ currentData.pl_name}}</span><span class="noData" data-text="Unknown"
+                *ngIf="!currentData.pl_name"> Unknown</span></p>
+            <p class="card-text"><span class="cardTitle">Distance</span><span *ngIf="currentData.st_dist">
+                {{currentData.st_dist}}</span><span class="noData" *ngIf="!currentData.st_dist"> No data</span></p>
+            <p class="card-text"><span class="cardTitle">Orbital period:</span><span *ngIf="currentData.pl_orbper">
+                {{currentData.pl_orbper}}</span><span class="noData" *ngIf="!currentData.pl_orbper"> No data</span></p>
+            <p class="card-text"><span class="cardTitle">Mass:</span><span
+                *ngIf="currentData.pl_bmass">{{currentData.pl_bmass}}</span><span class="noData"
+                *ngIf="!currentData.pl_bmass"> No
+                data</span></p>
+            <p class="card-text"><span class="cardTitle">Radius:</span><span
+                *ngIf="currentData.pl_radj">{{currentData.pl_radj}}</span><span class="noData"
+                *ngIf="!currentData.pl_radj"> No
+                data</span></p>
+            <p class="card-text"><span class="cardTitle">Location:</span><span
+              *ngIf="currentData.st_glon">{{currentData.st_glon}} / {{currentData.st_glat}}</span><span class="noData"
+              *ngIf="!currentData.st_glon"> No
+              data</span></p>
+            <button class="travelButton">Travel</button>
+          </div>
+        </div>
         <div class="col-2"></div>
+      </div>
     </div>
+  </div>
+
+  <div *ngIf="data.length == 0">
+    <div class="loader">
+      <div class="loaderOutter">
+        <div class="loaderMid">
+          <div class="loaderInner"></div>
+        </div>
+      </div>
+      <p class="glitch" data-text="PROCESSING...">PROCESSING...</p>
     </div>
-</div>
-<p (click)="logdist()">Hey.</p>
-<img *ngIf="data.length == 0" src="https://loading.io/spinners/pacman/lg.eat-bean-pie-loading-gif.gif" class="attente" />
+  </div>
+  <!--<img *ngIf="data.length == 0" src="https://loading.io/spinners/pacman/lg.eat-bean-pie-loading-gif.gif" class="attente" />-->
+</section>
