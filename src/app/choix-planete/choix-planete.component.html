@@ -1,8 +1,8 @@
-<section class="pt-5 pb-5">
+<section class="pt-5 pb-5" *ngIf="!displayTravel">
   <h2 class="m-auto text-center">PLANET DATABASE</h2>
   <div class="container" *ngIf="data.length > 0">
     <div class="row">
-      <div class="col-lg-4 mb-3 mt-3 col-md-6 col-sm-12" *ngFor="let myData of data">
+      <div class="col-lg-4 mb-3 mt-3 col-md-6 col-sm-12" *ngFor="let myData of data; let i = index">
         <!--<table alt="Card image cap" *ngFor="let currentData of myData">
             <div class="tab">
                 <tr>
@@ -50,7 +50,7 @@
               *ngIf="currentData.st_glon">{{currentData.st_glon}} / {{currentData.st_glat}}</span><span class="noData"
               *ngIf="!currentData.st_glon"> No
               data</span></p>
-            <button class="travelButton">Travel</button>
+            <button class="travelButton" (click)="goToPlanet(i)">Travel</button>
           </div>
         </div>
         <div class="col-2"></div>
@@ -69,4 +69,62 @@
     </div>
   </div>
   <!--<img *ngIf="data.length == 0" src="https://loading.io/spinners/pacman/lg.eat-bean-pie-loading-gif.gif" class="attente" />-->
+</section>
+<section  class="container pt-5 pb-5" *ngIf="displayTravel">
+  <button class="backButton col-2" (click)="goBack()">Back</button>
+    <h2 class="m-auto text-center">TRAVEL</h2>
+    <div class="row">
+        <div class="col-2 text-center">
+            <h3 class="col-12">Earth</h3>
+            <img src="" alt="">
+        </div>
+        <div class="col-8 row text-center">
+           <p class="col-4 arrowtext">⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒ </p> <h4 class="col-4"> {{math.round(lightYearAway)}} Light Year </h4><p class="col-4 arrowtext"> ⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒⇒</p>
+        </div>
+        <div class="col-2 text-center">
+            <h3 class="col-12">{{planetToGo}}</h3>
+            <img src="" alt="">
+        </div>
+    </div>
+    
+   
+    <div class="resultDisplay col-12">
+        <h3 class="displayTravelTitle">Weather:</h3>
+        <div *ngIf="todayData.length == 0 && todayLoading == true">
+            <div class="loader">
+              <div class="loaderOutter">
+                <div class="loaderMid">
+                  <div class="loaderInner"></div>
+                </div>
+              </div>
+              <p class="glitch" data-text="PROCESSING...">PROCESSING...</p>
+            </div>
+        </div>
+        <p class="dayWeather displayTravelText" *ngIf="todayData == ''"><span class="noEvent">Nothing to report for today. You're good to go!</span></p>
+        <div *ngFor="let currentData of todayData">
+            <div class="card m-2 dayWeather" *ngFor="let myDayData of currentData">
+                <div class="card-body">
+                    <h4 class="card-title text-light"><span class="title">Event type:</span> {{myDayData.type}}</h4>
+                    <p class="card-text text-light"><span class="title">Event ID:</span> {{myDayData.id}}</p>
+                    <p class="card-text text-light"><span class="title">Start Date:</span> {{myDayData.date}}</p>
+                    <div *ngIf="myDayData.location"><span class="title">Location: </span>
+                        <p class="ml-2" *ngIf="myDayData.latitude"><span class="title">latitude:
+                            </span>{{ myDayData.latitude }}<br /><span class="title">longitude: </span>{{ myDayData.longitude }}</p>
+                        <p *ngIf="!myDayData.latitude">{{myDayData.location}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="displayTravelTitle">Other:</h3>
+        <div class='displayTravelTextOther'>
+          <p>Nothing else, have a nice journey!</p>
+        </div>
+        <div class="row displayTravelTitle">
+          <h3 class="col-6 offset-4">Price: {{math.round(travelCost)}} ¤</h3>
+        </div>
+        
+        
+            
+        
+    </div>
 </section>

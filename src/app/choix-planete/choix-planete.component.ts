@@ -9,13 +9,15 @@ import { WeatherEvent } from '../weather-event';
 })
 
 export class ChoixPlaneteComponent implements OnInit {
-
+  math = Math;
+  i:number 
   data:any;
   planetArray:any;
 
   displayTravel:boolean;
   lightYearAway:number;
   travelCost:number;
+  planetToGo:string
 
   todayData:WeatherEvent[];
 
@@ -26,16 +28,19 @@ export class ChoixPlaneteComponent implements OnInit {
   todayLoading: boolean = true;
   todayEvent: string[] = ["CME", "GST", "IPS", "FLR", "SEP", "MPC", "RBE", "HSS"];
   dataArray = [];
-
   
-  goToPlanet(a:number){
-    this.lightYearAway = ((this.planetArray[0].st_dist)*3.26156)
-    this.travelCost = (this.lightYearAway*150000)
-  }
-  logdist(){
-    console.log(this.planetArray[0].st_dist)
-  }
 
+  goToPlanet(a:number){
+    console.log(a)
+    this.displayTravel = true;
+    this.planetArray = this.data[a];
+    this.planetToGo = this.planetArray[0].pl_name;
+    this.lightYearAway = ((this.planetArray[0].st_dist)*3.26156);
+    this.travelCost = (this.lightYearAway*150000);
+  }
+  goBack(){
+    this.displayTravel = false;
+  }
   constructor(private myService:PlanetsService , private todayService: TodayWeatherService) {
     this.data=[];
     this.todayData = [];
@@ -47,7 +52,7 @@ export class ChoixPlaneteComponent implements OnInit {
     this.myService.getPlanets().subscribe(
       (param_data:any[])=>{
         this.data = param_data;
-        this.planetArray = this.data[0];
+        
       }
     );
     for (let eventValue of this.todayEvent) {
