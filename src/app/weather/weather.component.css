@@ -86,6 +86,10 @@ h3{
     /*animation: enlarge 0.5s linear 1;*/
 }
 
+.dayContainer{
+    margin-bottom: 2%;
+}
+
 @keyframes enlarge{
     0% {
         width: 0;
@@ -110,9 +114,9 @@ h3{
     }
 }
 
-.noEvent{
-    /*animation: display 0.5s linear 1;*/
-}
+/* .noEvent{
+    animation: display 0.5s linear 1;
+} */
 
 @keyframes display{
     0% {

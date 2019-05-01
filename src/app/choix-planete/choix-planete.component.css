@@ -121,6 +121,10 @@ table{
     transition: all 0.5s;
 }
 
+.latitude{
+    margin-left: 30%;
+}
+
 .noData{
     color: rgba(169, 255, 251, 0.568);
 }
@@ -194,7 +198,7 @@ table{
     background: rgba(36, 6, 36, 0.596);
     padding: 2%;
     padding-top: 10px;
-    height: 50vh;
+    /* height: 50vh; */
     animation: fadeIn linear 1s 1;
 }
 .displayTravelTitle{
@@ -236,4 +240,20 @@ table{
 }
 .arrowtext{
     font-size: calc(0.2rem + 0.6vw)
+}
+
+.dayWeather{
+    padding: 2%;
+    margin: auto;
+    border:2px solid white;
+    text-align: center;
+    box-shadow: 0 0 5px rgb(169, 255, 251);
+    background-color: rgba(35, 35, 35, 0.726);
+}
+
+.title{
+    font-weight: 600;
+    color: rgb(255, 185, 94);
+    text-shadow: 0 0 10px rgb(255, 185, 94);
+    margin-right: 2%;
 }
