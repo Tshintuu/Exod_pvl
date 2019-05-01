@@ -2,13 +2,14 @@ app-menu{
     margin:0px;
     padding:0px;
 }
+
 .apodcont{
     background: rgba(35, 35, 35, 0.726);
-    max-height: 500px;
+    max-height: 50vh;
     padding-bottom: 2% ;
-    padding-top: 2% ;
+    padding-top: 15px;
     margin-bottom: 2%;
-    margin-top: 2%;
+    margin-top: 15px;
 }
 .apod{
     display: block;
@@ -22,7 +23,8 @@ app-menu{
     overflow:scroll;
 }
 .imgsponsor{
-    width: 60%
+    width: 60%;
+    max-width: 7vw;
 }
 .sponsortitle{
     background: rgba(35, 35, 35, 0.726);
@@ -54,11 +56,21 @@ app-menu{
     color: grey;
 }
 .article{
-    height: 46%;
+    height: 48%;
     background: rgba(35, 35, 35, 0.726);
-    margin-top: 7%;
+    margin-top: 15px;
     color: white;
     margin-right:0px;
+    padding-bottom: 2% ;
+    padding-top: 15px ;
+}
+.articleVoid{
+    background: rgba(35, 35, 35, 0.726);
+    margin-top: 15px;
+    color: white;
+    margin-right:0px;
+    padding-bottom: 2% ;
+    padding-top: 15px ;
 }
 .ma{
     margin-right:0px;

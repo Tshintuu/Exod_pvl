@@ -23,11 +23,11 @@
                 <img class="imgsponsor" src="assets/sponsor1.png" alt="">
                 <p class="sponsortxt sponsor1">Eternal.inc</p>
             </div>
-            <div class="sponsorcont col-3 offset-1 d-flex justify-content-center">
+            <div (click)="setNews1()" class="sponsorcont col-3 offset-1 d-flex justify-content-center">
                 <img class="imgsponsor" src="assets/teslaburg.png" alt="">
                 <p class="sponsortxt sponsor2">TESLA BURG</p>
             </div>
-                <div class="sponsorcont col-3 offset-1 d-flex justify-content-center">
+            <div (click)="setNews2()" class="sponsorcont col-3 offset-1 d-flex justify-content-center">
                 <img class="imgsponsor" src="assets/riftEngines.png" alt="">
                 <p class="sponsortxt sponsor3">Rift Engines</p>
             </div>
@@ -36,11 +36,16 @@
     </div>
     <!-- Articles desktop -->
     <div class="col-3 d-none d-lg-block ma">
-        <div class="article col-12 ma">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus commodi harum laborum nesciunt aliquam. Quam, consequatur? </p>
+        <div *ngIf="!shownews" class="articleVoid col-12 ma">
+            <p class="col-12">News will apear here if anything is happening!</p>
         </div>
-        <div class="article col-12 ma">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus commodi harum laborum nesciunt aliquam. Quam, consequatur? </p>
+        <div *ngIf="news1" class="article col-12 ma">
+            <p class="col-12 title">{{news1title}}</p>
+            <p class="col-12 expl">{{news1}}</p>
+        </div>
+        <div *ngIf="news2" class="article col-12 ma">
+            <p class="col-12 title">{{news2title}}</p>
+            <p class="col-12 expl">{{news2}}</p>
         </div>
     </div>
 </div>

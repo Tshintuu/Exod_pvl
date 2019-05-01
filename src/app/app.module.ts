@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'planets', component: ChoixPlaneteComponent },
   { path: 'job', component: JobComponent },
   { path: 'services', component: ServicesComponent },
-  { path: 'sandbox', component: SandboxComponent }
+  { path: 'sandbox', component: SandboxComponent },
 
   // { path: 'path/:routeParam', component: MyComponent },
   // { path: 'staticPath', component: ... },
@@ -54,7 +54,7 @@ const routes: Routes = [
     TestrouteoutputComponent,
     ChoixPlaneteComponent,
     JobComponent,
-    ServicesComponent
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,
