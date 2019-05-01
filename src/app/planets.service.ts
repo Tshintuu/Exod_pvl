@@ -17,7 +17,7 @@ public getPlanets():Observable<string[]>{
         
         let results:any[]=[];
         let currentData=null;
-        for (let i=0; i<9; i++){
+        for (let i=0; i<21; i++){
           currentData = param_data[i];
           results.push([currentData]);
         }
