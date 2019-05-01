@@ -15,10 +15,12 @@ import { FooterComponent } from './footer/footer.component';
 import { TestrouteoutputComponent } from './testrouteoutput/testrouteoutput.component';
 import { JobComponent } from './job/job.component';
 import { ServicesComponent } from './services/services.component';
+import { TravelComponent } from './travel/travel.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'menutest', component: TestrouteoutputComponent },
+  { path: 'travel', component: TravelComponent },
   { path: 'weather', component: WeatherComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'planets', component: ChoixPlaneteComponent },
@@ -55,6 +57,7 @@ const routes: Routes = [
     ChoixPlaneteComponent,
     JobComponent,
     ServicesComponent,
+    TravelComponent,
   ],
   imports: [
     BrowserModule,

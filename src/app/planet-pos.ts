@@ -1,4 +1,5 @@
 export class PlanetPos {
+    name:string;
     xCoord:number;
     yCoord:number;
     xPlaneCoord:number;

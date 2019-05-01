@@ -4,12 +4,17 @@ footer {
     background-size: 100% 100%;
 }
 li a{
-    color: rgba(168, 157, 0, 0.568);
+    color: black;
     font-family: 'Wallpoet',cursive;
     font-size: calc(1rem + 1.8vw);
+    text-shadow: none;
+    transition: color 0.5s;
+    transition: text-shadow 0.5s;
 }
 li a:hover {
     color: bisque;
+    text-shadow: 0 0 10px white;
+    transition: all 0.5s;
 }
 .nav{
     margin-top: 2%;
