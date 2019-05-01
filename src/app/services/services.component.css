@@ -1,54 +1,23 @@
-#station{
-    border: 5px rgb(41, 151, 27) solid;
-    box-shadow:  0px 0px 20px rgb(45, 211, 4),-10px 0px 10px rgb(89, 204, 60),10px 0px 10px rgb(134, 228, 105);
-    
+.serviceCard{
+    border: 2px solid rgb(169, 255, 251);
+    box-shadow: 0 0 10px rgb(169, 255, 251);
+    padding: 1%;
 }
-#station:hover{
-    border: 10px rgb(41, 151, 27) double;
-    box-shadow:  0px 0px 20px rgb(85, 185, 3),-15px 0px 15px rgb(163, 233, 51),15px 0px 15px rgb(192, 235, 72);
-    
-}
-.para{
-    font-size: 18px;
-    color: rgb(255, 147, 7);
-    background-color: rgb(12, 15, 14);
-    margin-left: 9%;
+
+.serviceCard p{
+    margin: auto;
     text-align: center;
-    font-family: 'Open Sans';
-    text-shadow: 0px 0px 50px rgb(240, 224, 6),-10px 0px 10px rgb(240, 230, 87),10px 0px 10px rgb(235, 226, 100);
-    
-
-}
-.para2{
-    margin-left: 8%;
-    color: rgb(255, 147, 7);
-    background-color: rgb(12, 15, 14);
-    margin-top: 5%;
-    margin-bottom: 12%;
-    text-align: center;
-    font-family: 'Open Sans';
-    text-shadow: 0px 0px 50px rgb(240, 224, 6),-10px 0px 10px rgb(240, 230, 87),10px 0px 10px rgb(235, 226, 100);
-
+    color: rgb(255, 185, 94);
+    text-shadow: 0 0 10px rgb(255, 185, 94);
+    transition: text-shadow 1s;
 }
 
-.para3{
-    margin-left: 5%;
-    color: rgb(255, 147, 7);
-    background-color: rgb(12, 15, 14);
-    margin-top: 3%;
-    text-align: center;
-    font-family: 'Open Sans';
-    text-shadow: 0px 0px 50px rgb(240, 224, 6),-10px 0px 10px rgb(240, 230, 87),10px 0px 10px rgb(235, 226, 100);
-
+.serviceCard:hover p {
+    text-shadow: -2px -2px 10px rgb(255, 185, 94),
+                 2px 2px 10px rgb(255, 185, 94);
+    transition: all 1s;
 }
 
-.para4{
-    margin-left: 5%;
-    color: rgb(255, 147, 7);
-    background-color: rgb(12, 15, 14);
-    margin-top: 3%;
-    text-align: center;
-    font-family: 'Open Sans';
-    text-shadow: 0px 0px 50px rgb(240, 224, 6),-10px 0px 10px rgb(240, 230, 87),10px 0px 10px rgb(235, 226, 100);
-
+a:hover{
+    text-decoration: none;
 }
