@@ -72,3 +72,21 @@ app-menu{
     color: white;
     font-size: 0.8rem;
 }
+#meteo{
+    height: 50%;
+    width: auto;
+}
+#soleil{
+    height: 40%;
+    width: auto;
+}
+h1{
+    color: aqua;
+    text-align: center;
+    animation: Test 2s infinite;
+}
+@keyframes Test{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
