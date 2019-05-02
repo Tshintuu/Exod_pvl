@@ -75,7 +75,10 @@
           <g *ngFor="let current of planets">
             <circle class="planetItem" [attr.cx.]="current.xPlaneCoord" [attr.cy.]="current.yPlaneCoord" r="0.8" stroke="white" stroke-width="0.2" fill="none"/>
             <circle class="planetItem" [attr.cx.]="current.xPlaneCoord" [attr.cy.]="current.yPlaneCoord" r="0.6" [attr.fill.]="current.heightColor" stroke-width="0" stroke="none"/>
-            <text id="planetName" class="planetName" [attr.x.]="current.xPlaneCoord" [attr.y.]="current.yPlaneCoord" transform="translate(1, -1)" style="font-family: 'Orbitron', sans-serif; fill: white; font-size: 0.1rem;">{{current.name}}</text>
+            <g class="planetName" [attr.x.]="current.xPlaneCoord" [attr.y.]="current.yPlaneCoord">
+              <text [attr.x.]="current.xPlaneCoord" [attr.y.]="current.yPlaneCoord"  transform="translate(1, -1)" style="font-family: 'Orbitron', sans-serif; fill: white; font-size: 0.1rem;">{{current.name}}</text>
+              <line id="roadLine" class="roadLine" x1="50" y1="50" [attr.x2.]="current.xPlaneCoord" [attr.y2.]="current.yPlaneCoord" stroke="red" stroke-width="0.2" />
+            </g>
           </g>
       
           <!-- Map key-->

@@ -57,10 +57,6 @@ export class TravelComponent implements OnInit {
     );
   }
 
-  /*displayName(){
-    document.getElementById('planetName').style.opacity= "1";
-  }*/
-
   ngOnInit() {
   }
 
