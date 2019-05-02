@@ -44,7 +44,7 @@ export class TravelComponent implements OnInit {
             console.log(planeDistance+"is the distance to the image on the plane, awesome!")
             let planetPos = new PlanetPos;
             planetPos.name = planet[j].pl_name;
-            planetPos.dist = planet[j].st_dist;
+            planetPos.dist = Math.round(planet[j].st_dist * 3.26156);
             planetPos.yPlaneCoord = -((planeDistance * Math.cos(planet[j].st_glon * (Math.PI/180)))) + 50; //Coordinates divided by 4 to stay in svg frame and added 50 because it is the origin.
             planetPos.xPlaneCoord = -((planeDistance * Math.sin(planet[j].st_glon * (Math.PI/180)))) + 50;
             planetPos.xCoord = planetPos.xPlaneCoord + 0.5;
