@@ -21,7 +21,7 @@ export class MainComponent implements OnInit {
   }
   setNews2(){
     this.shownews =true;
-    this.news2title = '⚠ Meteorological danger ⚠'
+    this.news2title = '⚠ Meteorological danger'
     this.news2 = 'Very fast man running at incredible speed'
   }
   constructor(private apodService : ApodService) {

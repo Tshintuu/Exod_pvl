@@ -1,5 +1,5 @@
 <section class="pt-5 pb-5">
-  <h2 class="m-auto text-center">Spacemap</h2>
+  <h2 class="m-auto text-center">SPACEMAP</h2>
   <div *ngIf="data.length == 0">
       <div class="loader">
         <div class="loaderOutter">
@@ -75,7 +75,17 @@
           <g *ngFor="let current of planets">
             <circle class="planetItem" [attr.cx.]="current.xPlaneCoord" [attr.cy.]="current.yPlaneCoord" r="0.8" stroke="white" stroke-width="0.2" fill="none"/>
             <circle class="planetItem" [attr.cx.]="current.xPlaneCoord" [attr.cy.]="current.yPlaneCoord" r="0.6" [attr.fill.]="current.heightColor" stroke-width="0" stroke="none"/>
-            <text id="planetName" class="planetName" [attr.x.]="current.xPlaneCoord" [attr.y.]="current.yPlaneCoord" transform="translate(1, -1)" style="font-family: 'Orbitron', sans-serif; fill: white; font-size: 0.1rem;">{{current.name}}</text>
+            <g class="planetName" [attr.x.]="current.xPlaneCoord" [attr.y.]="current.yPlaneCoord">
+              <text [attr.x.]="current.xPlaneCoord" [attr.y.]="current.yPlaneCoord"  transform="translate(1, -1)" style="font-family: 'Orbitron', sans-serif; fill: white; font-size: 0.1rem;">{{current.name}}</text>
+              <text [attr.x.]="current.xPlaneCoord" [attr.y.]="current.yPlaneCoord"  transform="translate(1.5, 1)" style="font-family: 'Orbitron', sans-serif; fill: white; font-size: 0.08rem;">{{current.dist}} ly</text>
+              <path id="roadPath" [attr.d.]="current.travelPath" stroke="red" stroke-width="0.2"/>
+              <!--<text style="font-family: 'Orbitron', sans-serif; fill: white; font-size: 1rem;">
+                <textPath xlink:href="#roadPath" textLength="100">
+                  COUCOU
+                </textPath>
+              </text>-->
+            </g>
+            
           </g>
       
           <!-- Map key-->

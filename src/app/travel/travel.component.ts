@@ -44,10 +44,13 @@ export class TravelComponent implements OnInit {
             console.log(planeDistance+"is the distance to the image on the plane, awesome!")
             let planetPos = new PlanetPos;
             planetPos.name = planet[j].pl_name;
+            planetPos.dist = Math.round(planet[j].st_dist * 3.26156);
             planetPos.yPlaneCoord = -((planeDistance * Math.cos(planet[j].st_glon * (Math.PI/180)))) + 50; //Coordinates divided by 4 to stay in svg frame and added 50 because it is the origin.
             planetPos.xPlaneCoord = -((planeDistance * Math.sin(planet[j].st_glon * (Math.PI/180)))) + 50;
             planetPos.xCoord = planetPos.xPlaneCoord + 0.5;
             planetPos.yCoord = (((realDistance * Math.sin(planet[j].st_glon * (Math.PI/180)))/4) * isAbove * 0.5) + 50;
+            planetPos.travelPath = "M50 50 L"+planetPos.xPlaneCoord.toString()+" "+planetPos.yPlaneCoord.toString();
+            console.log("travel path : "+planetPos.travelPath);
             planetPos.heightColor = "rgb("+(heightDistance * isAbove + 127).toString()+","+(heightDistance * -isAbove + 127).toString()+",0)";
             this.planets.push(planetPos);
             console.log("x coord : "+planetPos.xCoord + " y coord : "+planetPos.yCoord);
@@ -56,10 +59,6 @@ export class TravelComponent implements OnInit {
       }
     );
   }
-
-  /*displayName(){
-    document.getElementById('planetName').style.opacity= "1";
-  }*/
 
   ngOnInit() {
   }

@@ -44,16 +44,17 @@ app-menu{
 }
 .sponsor1{
     font-family: "Nova Mono",Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
+    font-size: calc( 1rem  + 1.0vw);
+    color:rgb(138, 0, 138);
 }
 .sponsor2{
     font-family: "Wallpoet",Arial, Helvetica, sans-serif;
     font-size: calc( 0.7rem  + 1vw);
 }
 .sponsor3{
-    font-family: "Libre Barcode 39 Text",Arial, Helvetica, sans-serif;
-    font-size: calc( 0.7rem  + 1.2vw);
-    color: grey;
+    font-family: "Nova Mono",Arial, Helvetica, sans-serif;
+    font-size: calc( 1rem  + 1.0vw);
+    color: rgb(0, 0, 0);
 }
 .article{
     height: 48%;
