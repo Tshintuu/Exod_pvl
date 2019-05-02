@@ -5,4 +5,6 @@ export class PlanetPos {
     xPlaneCoord:number;
     yPlaneCoord:number;
     heightColor:string;
+    travelPath:string;
+    dist:number;
 }
