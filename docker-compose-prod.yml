@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  stargate:
+    container_name: stargate
+    build: .
+    labels:
+      - traefik.enable=true
+      - traefik.backend=battleofheroes
+      - traefik.frontend.rule=Host:laloupe.wilders.dev;PathPrefixStrip:/stargate
+      - traefik.docker.network=web
+      - traefik.port=80
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
